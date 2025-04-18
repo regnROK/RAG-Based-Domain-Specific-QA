@@ -24,7 +24,7 @@ def generate_answer(tokenizer, model, device, question, context, max_length=128)
     return tokenizer.decode(outputs[0], skip_special_tokens=True)
 
 # Load the fine-tuned model
-tokenizer, model, device = load_model("anjalipatel03/flan-t5-xl_finance_QA")
+tokenizer, model, device = load_model("base/flan-t5-xl_finance_QA")
 
 # Example test cases
 test_cases = [
