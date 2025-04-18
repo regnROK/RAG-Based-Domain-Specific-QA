@@ -18,7 +18,7 @@ device = torch.device("cpu")
 # Load models
 tokenizer = AutoTokenizer.from_pretrained("google/flan-t5-xl")
 model_original = AutoModelForSeq2SeqLM.from_pretrained("google/flan-t5-xl").to(device)
-model_finetuned = AutoModelForSeq2SeqLM.from_pretrained("anjalipatel03/flan-t5-xl_finance_QA").to(device)
+model_finetuned = AutoModelForSeq2SeqLM.from_pretrained("base/flan-t5-xl_finance_QA").to(device)
 
 # Load Sentence-BERT model for semantic similarity
 bert_model = SentenceTransformer('all-MiniLM-L6-v2').to(device)
