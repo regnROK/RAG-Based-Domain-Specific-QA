@@ -12,8 +12,8 @@ device = torch.device("cpu")
 embedding_model = SentenceTransformer("all-MiniLM-L6-v2")
 
 def load_finetuned_model():
-    tokenizer = AutoTokenizer.from_pretrained("anjalipatel03/flan-t5-xl_finance_QA")
-    model = AutoModelForSeq2SeqLM.from_pretrained("anjalipatel03/flan-t5-xl_finance_QA")
+    tokenizer = AutoTokenizer.from_pretrained("base/flan-t5-xl_finance_QA")
+    model = AutoModelForSeq2SeqLM.from_pretrained("base/flan-t5-xl_finance_QA")
     return tokenizer, model
 
 # Initialize ChromaDB
