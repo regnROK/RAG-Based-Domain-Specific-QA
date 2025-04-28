@@ -10,13 +10,6 @@ st.title("RAG-based QA with Fine-Tuned Flan-T5-XL")
 def get_finetuned_model():
     return rag.load_finetuned_model()
 
-# @st.cache_resource(show_spinner="Loading fine-tuned model...")
-# def load_model():
-#     from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
-#     model = AutoModelForSeq2SeqLM.from_pretrained("anjalipatel03/flan-t5-xl_finance_QA")
-#     tokenizer = AutoTokenizer.from_pretrained("anjalipatel03/flan-t5-xl_finance_QA")
-#     return model, tokenizer
-
 # Load only once
 tokenizer, model = get_finetuned_model()
 
